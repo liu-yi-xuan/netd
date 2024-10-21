@@ -25,28 +25,28 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/liu-yi-xuan/netdata#readme"
-Issues = "https://github.com/liu-yi-xuan/netdata/issues"
-Source = "https://github.com/liu-yi-xuan/netdata"
+Documentation = "https://github.com/liu-yi-xuan/netds#readme"
+Issues = "https://github.com/liu-yi-xuan/netds/issues"
+Source = "https://github.com/liu-yi-xuan/netds"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/netdata tests}"
+check = "mypy --install-types --non-interactive {args:src/netds tests}"
 
 [tool.coverage.run]
-source_pkgs = ["netdata", "tests"]
+source_pkgs = ["netds", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/netdata/__about__.py",
+  "src/netds/__about__.py",
 ]
 
 [tool.coverage.paths]
-netdata = ["src/netdata", "*/netdata/src/netdata"]
-tests = ["tests", "*/netdata/tests"]
+netds = ["src/netds", "*/netds/src/netds"]
+tests = ["tests", "*/netds/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
