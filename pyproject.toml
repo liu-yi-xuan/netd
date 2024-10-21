@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "netds"
+name = "netd"
 version = "0.1"
 description = ''
 readme = "README.md"
@@ -25,28 +25,28 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/liu-yi-xuan/netds#readme"
-Issues = "https://github.com/liu-yi-xuan/netds/issues"
-Source = "https://github.com/liu-yi-xuan/netds"
+Documentation = "https://github.com/liu-yi-xuan/netd#readme"
+Issues = "https://github.com/liu-yi-xuan/netd/issues"
+Source = "https://github.com/liu-yi-xuan/netd"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/netds tests}"
+check = "mypy --install-types --non-interactive {args:src/netd tests}"
 
 [tool.coverage.run]
-source_pkgs = ["netds", "tests"]
+source_pkgs = ["netd", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/netds/__about__.py",
+  "src/netd/__about__.py",
 ]
 
 [tool.coverage.paths]
-netds = ["src/netds", "*/netds/src/netds"]
-tests = ["tests", "*/netds/tests"]
+netd = ["src/netd", "*/netdata/src/netd"]
+tests = ["tests", "*/netd/tests"]
 
 [tool.coverage.report]
 exclude_lines = [
